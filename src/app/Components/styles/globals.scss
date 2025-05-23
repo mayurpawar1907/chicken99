@@ -1,0 +1,257 @@
+
+@import "bootstrap/scss/bootstrap"; // Bootstrap core (uses your variables)
+ // Your overrides (must come before bootstrap)
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  a {
+    color: blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.banner {
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  bottom: 90px;
+
+  .video-bg {
+    object-fit: cover;
+    
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5); // optional dark overlay
+  
+  }
+
+  .content {
+    z-index: 1;
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+}
+.location-card {
+  height: 100px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.location-card:hover {
+  background-color: #ffe8cc;
+  transform: translateY(-5px);
+  border-color: #ff9900;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.card-body {
+  background: #f8f9fa; /* Subtle background for the body */
+  border-top: 1px solid #ddd; /* Border to separate image and body */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333; /* Darker color for better readability */
+}
+
+.card-text {
+  color: #555; /* Slightly lighter text color for description */
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.dish-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px); /* Slight upward motion on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333; /* Dark color for better readability */
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d; /* Lighter color for descriptions */
+  line-height: 1.5;
+}
+
+/* Animation for fade-in effect when the page loads */
+.container {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* For responsiveness, adjust the column size */
+@media (max-width: 768px) {
+  .col-md-3 {
+    width: 100%;
+  }
+}
+.top-banner {
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 450px;
+}
+
+.top-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: -1;
+}
+
+.top-banner h1 {
+  position: relative;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+/* styles/global.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.restaurant-card {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.filter-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.filter-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #0056b3;
+}
+
+.filter-button.active {
+  background-color: #28a745;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+    height: 50;
+  }
+
+  .search-input:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 10px #ffc107;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+
+  .search-input:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    
+  }
+  .search-input::placeholder {
+    color: white;
+    opacity: 0.7; /* makes it a little subtle */
+  }
+
+  .search-input:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 10px #ffc107;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+
+  .search-input:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }

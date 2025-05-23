@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
 import Header from "./Components/Header";
 import Footer from  "./Components/Footer"
+
+
+import './globals.css'; // Keep your global styles here if needed
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
